@@ -1,11 +1,14 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Mail
 %define	pnam	ListDetector
-Summary:	%{pdir}::%{pnam} -- Perl extension for detecting mailing list messages
-Summary(pl):	%{pdir}::%{pnam} -- rozszerzenie Perla do wykrywania poczty z list dyskusyjnych
-Name:		perl-%{pdir}-%{pnam}
+Summary:	Mail::ListDetector - Perl extension for detecting mailing list messages
+Summary(pl):	Mail::ListDetector - rozszerzenie Perla do wykrywania poczty z list dyskusyjnych
+Name:		perl-Mail-ListDetector
 Version:	0.22
-Release:	1
+Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -35,7 +38,8 @@ i Ezmlm.
 %build
 perl Makefile.PL
 %{__make}
-#%{__make} test
+
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -50,7 +54,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Change* AUTHORS BUGS README TODO
-%{perl_sitelib}/%{pdir}/*.pm
-%{perl_sitelib}/%{pdir}/%{pnam}
+%{perl_sitelib}/Mail/*.pm
+%{perl_sitelib}/Mail/ListDetector
+%{perl_sitelib}/auto/Mail/*
 %attr(755,root,root) %{_examplesdir}/%{name}-%{version}
 %{_mandir}/man3/*
