@@ -50,5 +50,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc Change* AUTHORS BUGS README TODO
 %{perl_sitelib}/%{pdir}/*.pm
 %{perl_sitelib}/%{pdir}/%{pnam}
-%{_examplesdir}/%{name}-%{version}
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}
 %{_mandir}/man3/*
