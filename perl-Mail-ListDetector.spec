@@ -10,7 +10,8 @@ Summary(pl):	Mail::ListDetector - rozszerzenie Perla do wykrywania poczty z list
 Name:		perl-Mail-ListDetector
 Version:	0.29
 Release:	1
-License:	GPL/Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	0ffbc9a98dedd77682dc2b63d5c212d9
