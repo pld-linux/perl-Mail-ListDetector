@@ -1,6 +1,7 @@
 #
 # Conditional build:
 # _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Mail
 %define	pnam	ListDetector
@@ -8,7 +9,7 @@ Summary:	Mail::ListDetector - Perl extension for detecting mailing list messages
 Summary(pl):	Mail::ListDetector - rozszerzenie Perla do wykrywania poczty z list dyskusyjnych
 Name:		perl-Mail-ListDetector
 Version:	0.22
-Release:	3
+Release:	4
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -59,6 +60,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc Change* AUTHORS BUGS README TODO
 %{perl_sitelib}/Mail/*.pm
 %{perl_sitelib}/Mail/ListDetector
-%{perl_sitelib}/auto/Mail/*
+# empty autosplit.ix
+#%dir %{perl_sitelib}/auto/Mail
+#%{perl_sitelib}/auto/Mail/autosplit.ix
 %attr(755,root,root) %{_examplesdir}/%{name}-%{version}
 %{_mandir}/man3/*
