@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
+%bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Mail
@@ -16,7 +16,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 # Source0-md5:	0ffbc9a98dedd77682dc2b63d5c212d9
 BuildRequires:	perl-devel >= 5
 BuildRequires:	rpm-perlprov >= 4.1-13
-%{!?_without_tests:BuildRequires:	perl-Email-Valid}
+%{?with_tests:BuildRequires:	perl-Email-Valid}
 Requires:	perl-Email-Valid
 Requires:	perl-URI
 BuildArch:	noarch
@@ -45,7 +45,7 @@ i Ezmlm.
 	INSTALLDIRS=vendor
 %{__make}
 
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
