@@ -6,7 +6,7 @@
 %define		pdir	Mail
 %define		pnam	ListDetector
 Summary:	Mail::ListDetector - Perl extension for detecting mailing list messages
-Summary(pl):	Mail::ListDetector - rozszerzenie Perla do wykrywania poczty z list dyskusyjnych
+Summary(pl.UTF-8):   Mail::ListDetector - rozszerzenie Perla do wykrywania poczty z list dyskusyjnych
 Name:		perl-Mail-ListDetector
 Version:	0.31
 Release:	1
@@ -33,12 +33,12 @@ Mail::ListDetector::List object representing the mailing list.
 The RFC2369 mailing list detector is also capable of matching some
 Mailman and Ezmlm messages.
 
-%description -l pl
-Ten modu³ analizuje obiekty Mail::Internet.  Zwraca obiekt
-Mail::ListDetector::List, reprezentuj±cy listê dyskusyjn±.
+%description -l pl.UTF-8
+Ten moduÅ‚ analizuje obiekty Mail::Internet.  Zwraca obiekt
+Mail::ListDetector::List, reprezentujÄ…cy listÄ™ dyskusyjnÄ….
 
-Zgodny z RFC2369 kod do rozpoznawania list jest tak¿e zdolny do
-wy³apywania czê¶ci wiadomo¶ci, produkowanych przez programy Mailman
+Zgodny z RFC2369 kod do rozpoznawania list jest takÅ¼e zdolny do
+wyÅ‚apywania czÄ™Å›ci wiadomoÅ›ci, produkowanych przez programy Mailman
 i Ezmlm.
 
 %prep
