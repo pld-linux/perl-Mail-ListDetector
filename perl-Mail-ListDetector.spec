@@ -6,7 +6,7 @@
 %define		pdir	Mail
 %define		pnam	ListDetector
 Summary:	Mail::ListDetector - Perl extension for detecting mailing list messages
-Summary(pl.UTF-8):   Mail::ListDetector - rozszerzenie Perla do wykrywania poczty z list dyskusyjnych
+Summary(pl.UTF-8):	Mail::ListDetector - rozszerzenie Perla do wykrywania poczty z list dyskusyjnych
 Name:		perl-Mail-ListDetector
 Version:	0.31
 Release:	1
