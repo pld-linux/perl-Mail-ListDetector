@@ -8,13 +8,13 @@
 Summary:	Mail::ListDetector - Perl extension for detecting mailing list messages
 Summary(pl.UTF-8):	Mail::ListDetector - rozszerzenie Perla do wykrywania poczty z list dyskusyjnych
 Name:		perl-Mail-ListDetector
-Version:	0.31
-Release:	2
+Version:	1.01
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	e1072d72ff6e9c024f80e9cc1f3174f9
+# Source0-md5:	1d60d2ecadffaedfab89c8f286186269
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
