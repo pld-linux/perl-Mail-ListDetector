@@ -1,10 +1,10 @@
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	Mail
 %define		pnam	ListDetector
+%include	/usr/lib/rpm/macros.perl
 Summary:	Mail::ListDetector - Perl extension for detecting mailing list messages
 Summary(pl.UTF-8):	Mail::ListDetector - rozszerzenie Perla do wykrywania poczty z list dyskusyjnych
 Name:		perl-Mail-ListDetector
@@ -15,6 +15,7 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	ab3554c5bd87cf22dc720b0847780c77
+URL:		http://search.cpan.org/dist/Mail-ListDetector/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
@@ -27,19 +28,19 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This module analyzes Mail::Internet objects.  It returns a
+This module analyzes Mail::Internet objects. It returns a
 Mail::ListDetector::List object representing the mailing list.
 
 The RFC2369 mailing list detector is also capable of matching some
 Mailman and Ezmlm messages.
 
 %description -l pl.UTF-8
-Ten moduł analizuje obiekty Mail::Internet.  Zwraca obiekt
+Ten moduł analizuje obiekty Mail::Internet. Zwraca obiekt
 Mail::ListDetector::List, reprezentujący listę dyskusyjną.
 
 Zgodny z RFC2369 kod do rozpoznawania list jest także zdolny do
-wyłapywania części wiadomości, produkowanych przez programy Mailman
-i Ezmlm.
+wyłapywania części wiadomości, produkowanych przez programy Mailman i
+Ezmlm.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
